@@ -2,4 +2,5 @@ import psutil
 
 all = psutil.pids()
 p = psutil.Process(3897)
-print(p.info)
+print(p.cpu_percent())
+
