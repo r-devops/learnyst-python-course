@@ -4,8 +4,8 @@ import psutil
 def top_cpu():
     all_pids = psutil.pids()
     for pid in all_pids:
-        pname = pid.Process.name()
-        pcpu = pid.Process.cpu_percent()
+        pname = psutil.Process(pid).name()
+        pcpu = psutil.Process(pid).cpu_percent()
         print(f"PID: {pid} Percentage: {pcpu} Name : {pname}")
 
 if __name__ == '__main__':
