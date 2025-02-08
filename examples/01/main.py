@@ -1,7 +1,7 @@
 # Get the current CPU and Memory Usage in the system, Plus top 3 CPU & Memory Process.
 import psutil
 
-def top_cpu:
+def top_cpu():
     all_pids = psutil.pids()
     for pid in all_pids:
         pname = pid.name()
