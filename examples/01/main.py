@@ -2,4 +2,5 @@
 import psutil
 
 if __name__ == '__main__':
-
+    cpu_percentage = psutil.cpu_percent()
+    print(f"Cpu Usage Percentage - {cpu_percentage}")
