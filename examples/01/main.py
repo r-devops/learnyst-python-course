@@ -4,3 +4,7 @@ import psutil
 if __name__ == '__main__':
     cpu_percentage = psutil.cpu_percent()
     print(f"Cpu Usage Percentage - {cpu_percentage}")
+
+    mem_percentage = psutil.virtual_memory()
+    print(f"Memory Usage Percentage - {mem_percentage}")
+
