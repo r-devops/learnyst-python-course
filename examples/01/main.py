@@ -3,7 +3,6 @@ import psutil
 
 def top_cpu():
     all_pids = psutil.pids()
-    print(all_pids)
     for pid in all_pids:
         pname = pid.name()
         pcpu = pid.cpu_percent()
