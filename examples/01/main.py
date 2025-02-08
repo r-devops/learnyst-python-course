@@ -15,3 +15,4 @@ if __name__ == '__main__':
     mem_percentage = psutil.virtual_memory().percent
     print(f"Memory Usage Percentage - {mem_percentage}")
 
+    top_cpu
