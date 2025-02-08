@@ -14,7 +14,7 @@ def all_memory():
         pname = psutil.Process(pid).name()
         pcpu = psutil.Process(pid).memory_percent()
         print(f"PID: {pid} Percentage: {pcpu} Name : {pname}")
-        print(sorted(pcpu))
+
 
 if __name__ == '__main__':
     cpu_percentage = psutil.cpu_percent()
@@ -30,6 +30,6 @@ if __name__ == '__main__':
 
     print("\nAll Process with Memory Usage")
     print("--------------------------")
-    all_memory()
+    print(all_memory().sort(key=lambda x: x[1]))
     print("--------------------------")
 
