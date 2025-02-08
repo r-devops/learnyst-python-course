@@ -12,7 +12,7 @@ def all_memory():
     all_pids = psutil.pids()
     for pid in all_pids:
         pname = psutil.Process(pid).name()
-        pcpu = psutil.Process(pid).memory_full_info()
+        pcpu = psutil.Process(pid).memory_percent()
         print(f"PID: {pid} Percentage: {pcpu} Name : {pname}")
 
 if __name__ == '__main__':
