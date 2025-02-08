@@ -1,0 +1,6 @@
+First line
+Second line
+Third line
+
+New line appended to the file.
+One more new line appended to the file.
