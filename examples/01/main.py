@@ -21,7 +21,7 @@ def all_memory():
         print(processes)
         print(f"{'PID':<10}{'Memory (%)':<15}{'Process Name'}")
         print("=" * 40)
-        for pid, pname, pmem in processes:
+        for pid, pname, pmem in processes[:3]:
             print(f"{pid} {pmem} {pname}")
 
 if __name__ == '__main__':
