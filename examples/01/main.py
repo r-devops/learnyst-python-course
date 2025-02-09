@@ -33,10 +33,10 @@ def top_mem_usage():
         pout.append((pid, pmem, pname))
         pout.sort(key=lambda x: x[1], reverse=True)
 
-    print(f"{'PID':<10}{'MEM %':<10}{'Process Name'}")
+    print(f"{'PID':<10}{'MEM %':<30}{'Process Name'}")
     print('-' * 50)
     for pid, mem, pname in pout:
-        print(f"{pid:<10}{mem:<10}{pname}")
+        print(f"{pid:<10}{mem:<30}{pname}")
 
 if __name__ == '__main__':
     print('System Usage')
