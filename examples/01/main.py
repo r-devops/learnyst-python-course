@@ -23,7 +23,7 @@ def all_cpu_usage():
     for pid, cpu, pname in pout:
         print(f"{pid:<10}{cpu:<10}{pname}")
 
-def top_mem_usage():
+def top_mem_usage(n=3):
     pout = []
     pid_list=psutil.pids()
     for pid in pid_list:
@@ -35,7 +35,7 @@ def top_mem_usage():
 
     print(f"{'PID':<10}{'MEM %':<30}{'Process Name'}")
     print('-' * 50)
-    for pid, mem, pname in pout:
+    for pid, mem, pname in pout[:n]:
         print(f"{pid:<10}{mem:<30}{pname}")
 
 if __name__ == '__main__':
@@ -49,6 +49,6 @@ if __name__ == '__main__':
 
     print('\nTop 3 Mem Process')
     print('*' * 50)
-    top_mem_usage()
+    top_mem_usage(3)
 
 
