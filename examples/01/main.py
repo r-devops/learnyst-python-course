@@ -18,6 +18,8 @@ def all_memory():
         # print(f"PID: {pid} Percentage: {pcpu} Name : {pname}")
         # print(sorted(pcpu, key=lambda x: x[0], reverse=True))
         processes.sort(key=lambda x: x[2], reverse=True)
+        for pid, pname, pmem in processes:
+            print(f"---------{pid}")
         print(f"{'PID':<10}{'Memory (%)':<15}{'Process Name'}")
         print("=" * 40)
         for pid, pname, pmem in processes:
