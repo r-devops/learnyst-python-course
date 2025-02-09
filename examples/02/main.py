@@ -28,7 +28,7 @@ def create_security_group():
     return(response["GroupId"])
 
 def create_ec2_instance(sg_id):
-    instance = client.create_instances(
+    instance = client.run_instances(
         ImageId='ami-09c813fb71547fc4f',
         InstanceType='t3.mciro',
         SecurityGroupIds=[
