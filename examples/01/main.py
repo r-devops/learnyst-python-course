@@ -3,8 +3,10 @@
 import psutil
 
 def system_usage():
-    print(psutil.cpu_percent())
-    print(psutil.virtual_memory())
+    pcpu=psutil.cpu_percent()
+    pemm=psutil.virtual_memory().percent
+    print(f"\tPercentage Cpu - {pcpu}")
+    print(f"\tPercentage Memory - {pemm}")
 
 if __name__ == '__main__':
     print('System Usage')
