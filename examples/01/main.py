@@ -6,10 +6,10 @@ if __name__ == '__main__':
     print('System Usage')
     print('*' * 50)
 
-    print('Top 3 Cpu Process')
+    print('\nTop 3 Cpu Process')
     print('*' * 50)
 
-    print('Top 3 Mem Process')
+    print('\nTop 3 Mem Process')
     print('*' * 50)
 
 
