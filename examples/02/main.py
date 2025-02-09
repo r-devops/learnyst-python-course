@@ -32,7 +32,7 @@ def create_ec2_instance(sg_id):
         MaxCount = 1,
         MinCount = 1,
         ImageId='ami-09c813fb71547fc4f',
-        InstanceType='t3.mciro',
+        InstanceType='t3.micro',
         SecurityGroupIds=[
             'string',
         ],
