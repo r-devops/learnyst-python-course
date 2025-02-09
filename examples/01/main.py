@@ -15,11 +15,11 @@ def top_cpu_usage():
         pinfo = psutil.Process(pid)
         pname = pinfo.name()
         pcpu  = pinfo.cpu_percent()
-        pout.append((pid, pname, pcpu))
+        pout.append((pid, pcpu, pname))
 
     print(f"{'PID':<10}{'Process Name':<30}{'Process CPU'}")
-    for pid, pname, cpu in pout:
-        print(f"{pid:<10}{pname:<30}{cpu}")
+    for pid, cpu, pname in pout:
+        print(f"{pid:<10}{cpu:<10}{pname}")
 
 if __name__ == '__main__':
     print('System Usage')
