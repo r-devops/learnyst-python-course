@@ -17,7 +17,7 @@ def all_memory():
         processes.append((pid, pname, pmem))
         # print(f"PID: {pid} Percentage: {pcpu} Name : {pname}")
         # print(sorted(pcpu, key=lambda x: x[0], reverse=True))
-        processes.sort(key=lambda x: x[2], reverse=True)
+        print(processes.sort(key=lambda x: x[2], reverse=True))
 
 if __name__ == '__main__':
     cpu_percentage = psutil.cpu_percent()
