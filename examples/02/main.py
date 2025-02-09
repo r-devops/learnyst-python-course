@@ -34,7 +34,7 @@ def create_ec2_instance(sg_id):
         ImageId='ami-09c813fb71547fc4f',
         InstanceType='t3.micro',
         SecurityGroupIds=[
-            'sg_id',
+            sg_id,
         ],
     )
 
