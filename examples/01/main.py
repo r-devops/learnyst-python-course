@@ -34,5 +34,6 @@ if __name__ == '__main__':
     print("\nAll Process with Memory Usage")
     print("--------------------------")
     #print(all_memory().sort(key=lambda x: x[1]))
+    all_memory
     print("--------------------------")
 
