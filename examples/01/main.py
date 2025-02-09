@@ -8,6 +8,17 @@ def system_usage():
     print(f"\tPercentage Cpu - {pcpu}")
     print(f"\tPercentage Memory - {pemm}")
 
+def top_cpu_usage():
+    pout = []
+    pid_list=psutil.pids()
+    for pid in pid_list:
+        pinfo = psutil.Process(pid)
+        pname = pinfo.name()
+        pcpu  = pinfo.cpu_percent()
+        pout.append((pid, pname, pcpu))
+
+    print(pout)
+
 if __name__ == '__main__':
     print('System Usage')
     print('*' * 50)
@@ -15,6 +26,7 @@ if __name__ == '__main__':
 
     print('\nTop 3 Cpu Process')
     print('*' * 50)
+    top_cpu_usage()
 
     print('\nTop 3 Mem Process')
     print('*' * 50)
