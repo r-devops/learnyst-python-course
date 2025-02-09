@@ -2,9 +2,13 @@
 
 import psutil
 
+def system_usage():
+
+
 if __name__ == '__main__':
     print('System Usage')
     print('*' * 50)
+    system_usage()
 
     print('\nTop 3 Cpu Process')
     print('*' * 50)
