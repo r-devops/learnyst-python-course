@@ -34,14 +34,10 @@ def create_ec2_instance(sg_id):
         ImageId='ami-09c813fb71547fc4f',
         InstanceType='t3.micro',
         SecurityGroupIds=[
-            'string',
-        ],
-        SecurityGroups=[
-            sg_id,
+            'sg_id',
         ],
     )
 
 if __name__ == '__main__':
     sg_id = create_security_group()
-    print(sg_id)
-    #create_ec2_instance(sg_id)
+    create_ec2_instance(sg_id)
