@@ -21,7 +21,7 @@ def all_memory():
         print(f"{'PID':<10}{'Memory (%)':<15}{'Process Name'}")
         print("=" * 40)
         for pid, pname, pmem in processes:
-            print(f"{pid:<10}{pmem:<15.2f}{pname}")
+            print(f"{pid} {pmem} {pname}")
 
 if __name__ == '__main__':
     cpu_percentage = psutil.cpu_percent()
