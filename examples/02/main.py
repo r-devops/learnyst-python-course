@@ -43,4 +43,5 @@ def create_ec2_instance(sg_id):
 
 if __name__ == '__main__':
     sg_id = create_security_group()
-    create_ec2_instance(sg_id)
+    print(sg_id)
+    #create_ec2_instance(sg_id)
