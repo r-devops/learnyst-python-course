@@ -16,8 +16,9 @@ def top_cpu_usage():
         pname = pinfo.name()
         pcpu  = pinfo.cpu_percent()
         pout.append((pid, pcpu, pname))
+        pout.sort(key=lambda x: x[1], reverse=True)
 
-    print(f"{'PID':<10}{'Process Name':<30}{'Process CPU'}")
+    print(f"{'PID':<10}{'CPU %':<0}{'Process Name'}")
     for pid, cpu, pname in pout:
         print(f"{pid:<10}{cpu:<10}{pname}")
 
